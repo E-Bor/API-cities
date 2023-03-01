@@ -104,8 +104,6 @@ class Cities:
 cities = Cities()
 
 
-def start_server():
-    uvicorn.run(app, host="127.0.0.1", port=8000)
 
 
 # Table for batch character replacement
@@ -207,5 +205,3 @@ def autocomplete(string: str = Query(min_length=1, max_length=20)):
     return AutoCompleteModel(list_of_variations=list_of_variations)
 
 
-if __name__ == "__main__":
-    start_server()
