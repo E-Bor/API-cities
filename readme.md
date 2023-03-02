@@ -1,4 +1,5 @@
 # Get started
+### Clear install 
 Before starting, you must install all the necessary packages. To do this, run the command:
 
 `pip install -r requirements.txt`
@@ -7,11 +8,24 @@ The next step you need to put the file "RU.txt" in the project directory "/Infot
 
 At the end, you can run the project with the command:
 
-`python3 script.py`
+`uvicorn script:app --host 127.0.0.1 --port 8000`
 
 The running server will be available at http://127.0.0.1:8000.  
 
 ***Please wait 10-15 seconds for the server to prepare the data.***
+
+### Using Docker
+
+For create docker container you should:   
+
+In project (API-cities folder) run:  
+`sudo docker build -t api-cities .`  
+`sudo docker run -p 8000:80 -h 127.0.0.1 api-cities`
+
+The running server will be available at http://127.0.0.1:8000.  
+
+***Please wait 10-15 seconds for the server to prepare the data.***
+
 
 ### Description of methods
 
